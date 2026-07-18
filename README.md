@@ -14,22 +14,6 @@ project status
 project sync
 ```
 
-### Command list
-
-```bash
-project init <ProjectName>
-project list
-project status
-project ignore <FileName/Pattern>
-project load <ProjectName>
-project commit <FileName>
-project sync
-project unload
-project backup
-project backup list
-project backup restore <Timestamp_ID>
-```
-
 This tool was designed around a very practical workflow:
 - you may be working from a location that is easy to reach from Android apps or a mobile file browser,
 - you may want to use Termux or a shell session for building and testing,
@@ -165,6 +149,20 @@ This packages the current workspace state and clears the active area.
 ---
 
 ## Command reference
+
+### Quick command list
+
+- project init <ProjectName> — creates the project vault folders and initial config structure.
+- project list — lists the available projects in the storage vault.
+- project status — shows whether the active workspace differs from the stored truth state.
+- project ignore <FileName/Pattern> — adds a file or pattern to the ignore list.
+- project load <ProjectName> — loads a project from the persistent vault into the active workspace.
+- project commit <FileName> — commits a file into the stable truth vault.
+- project sync — resets the active workspace to match the stored truth state.
+- project unload — archives the active workspace state and clears the temporary workspace.
+- project backup — creates a compressed backup snapshot of the current truth vault.
+- project backup list — shows the available backup snapshots.
+- project backup restore <Timestamp_ID> — restores an older vault snapshot.
 
 ### Project setup
 
