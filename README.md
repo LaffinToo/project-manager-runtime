@@ -14,6 +14,22 @@ project status
 project sync
 ```
 
+### Command list
+
+```bash
+project init <ProjectName>
+project list
+project status
+project ignore <FileName/Pattern>
+project load <ProjectName>
+project commit <FileName>
+project sync
+project unload
+project backup
+project backup list
+project backup restore <Timestamp_ID>
+```
+
 This tool was designed around a very practical workflow:
 - you may be working from a location that is easy to reach from Android apps or a mobile file browser,
 - you may want to use Termux or a shell session for building and testing,
