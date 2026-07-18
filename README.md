@@ -2,6 +2,18 @@
 
 PM is a lightweight C-based workspace switcher for mobile and desktop development. Its purpose is simple: keep a project in a persistent vault, load it into a temporary active workspace when you need to edit or inspect it, and then commit or restore changes back into the vault.
 
+It is especially useful when you want a clean, reliable way to work across Android/Termux, Windows/WSL, or any setup where you need to move a project between a stable storage location and a temporary working directory.
+
+A typical session looks like this:
+
+```bash
+project init myapp
+project load myapp
+project commit src/project.c
+project status
+project sync
+```
+
 This tool was designed around a very practical workflow:
 - you may be working from a location that is easy to reach from Android apps or a mobile file browser,
 - you may want to use Termux or a shell session for building and testing,
